@@ -14,14 +14,18 @@ public class lab_02_2 {
 
         float userBMI = userWeight / (userHeight * 2);
 
-        if (userBMI < 18.5) {
-            System.out.println("You are underweight");
-        } else if (userBMI >= 18.5 && userBMI <= 24.9) {
-            System.out.println("Your weight is normal");
-        } else if (userBMI >= 25 && userBMI <=29.9) {
-            System.out.println("You are overweight");
+        if (userWeight > 0 && userHeight > 0) {
+            if (userBMI < 18.5) {
+                System.out.println("You are underweight");
+            } else if (userBMI >= 18.5 && userBMI <= 24.9) {
+                System.out.println("Your weight is normal");
+            } else if (userBMI >= 25 && userBMI <= 29.9) {
+                System.out.println("You are overweight");
+            } else {
+                System.out.println("You are so fat!!!");
+            }
         } else {
-            System.out.println("You are so fat!!!");
+            System.out.println("Can nang hoac chieu cao khong hop le");
         }
     }
 }
