@@ -14,18 +14,24 @@ public class lab_02_3 {
 
         float userBMI = userWeight / (userHeight * 2);
 
-        if (userBMI < 18.5) {
-            System.out.println("You are underweight");
-            System.out.printf("You should increase %f kg", (18.5 * (userHeight * 2)) - userWeight);
-        } else if (userBMI >= 18.5 && userBMI <= 24.9) {
-            System.out.println("Your weight is normal");
-        } else if (userBMI >= 25 && userBMI <=29.9) {
-            System.out.println("You are overweight");
-            System.out.printf("You should decrease %f kg", ((24.9 * (userHeight * 2)) - userWeight) * -1);
-        } else {
-            System.out.println("You are so fat!!!");
-            System.out.printf("You should decrease %f kg", ((24.9 * (userHeight * 2)) - userWeight) * -1);
+        if (userWeight > 0 && userHeight > 0) {
 
+
+            if (userBMI < 18.5) {
+                System.out.println("You are underweight");
+                System.out.printf("You should increase %f kg", (18.5 * (userHeight * 2)) - userWeight);
+            } else if (userBMI >= 18.5 && userBMI <= 24.9) {
+                System.out.println("Your weight is normal");
+            } else if (userBMI >= 25 && userBMI <= 29.9) {
+                System.out.println("You are overweight");
+                System.out.printf("You should decrease %f kg", ((24.9 * (userHeight * 2)) - userWeight) * -1);
+            } else {
+                System.out.println("You are so fat!!!");
+                System.out.printf("You should decrease %f kg", ((24.9 * (userHeight * 2)) - userWeight) * -1);
+
+            }
+        } else {
+            System.out.println("Can nang hoac chieu cao khong hop le");
         }
     }
 }
