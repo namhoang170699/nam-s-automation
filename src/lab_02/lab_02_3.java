@@ -24,10 +24,10 @@ public class lab_02_3 {
                 System.out.println("Your weight is normal");
             } else if (userBMI >= 25 && userBMI <= 29.9) {
                 System.out.println("You are overweight");
-                System.out.printf("You should decrease %f kg", ((24.9 * (userHeight * 2)) - userWeight) * -1);
+                System.out.printf("You should decrease %f kg", Math.abs((24.9 * (userHeight * 2)) - userWeight));
             } else {
                 System.out.println("You are so fat!!!");
-                System.out.printf("You should decrease %f kg", ((24.9 * (userHeight * 2)) - userWeight) * -1);
+                System.out.printf("You should decrease %f kg", Math.abs((24.9 * (userHeight * 2)) - userWeight));
 
             }
         } else {
